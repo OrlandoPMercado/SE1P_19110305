@@ -47,6 +47,6 @@ objetivo_encontrado, costo_camino, camino = busqueda_tabu(inicial, objetivo, gra
 
 if objetivo_encontrado:
     print("Objetivo: Casa de Marifer")
-    print("Distancia recorrida de mi Casa a Casa de Marifer:", costo_camino," km")
+    print("Distancia recorrida de mi Casa a Casa de mi novia :", costo_camino," km")
 else:
     print("No se encontro el objetivo dentro del limite de iteraciones.")
