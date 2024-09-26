@@ -19,27 +19,22 @@ def ao_estrella(grafo, inicio, objetivo):
                 nuevo_camino = camino_actual + [vecino]
                 nuevo_costo = costo_actual + costo
                 frontera.append((vecino, nuevo_camino, nuevo_costo))
-    
-    print("No se encontro el objetivo.")
+    print("No se encontró el objetivo.")
     return False
 
-# Grafo con los nombres de los lugares
+# Grafo que representa lugares en la ciudad
 grafo = {
-    'Casa': [('La perla', 7), ('Plaza del sol', 5), ('Terraza Oblatos', 8)],
-    'La perla': [('Terraza Belenes', 4), ('CUCEA', 6), ('CUCS', 3)],
-    'Plaza del sol': [('CUCS', 3)],
-    'Terraza Oblatos': [('Transito', 2), ('Centro Historico', 5)],
-    'Terraza Belenes': [('Plaza Galerias', 9)],
-    'CUCEA': [('Real Center', 3), ('Casa de Marifer <3', 4)],
-    'CUCS': [('Andares', 7)],
-    'Transito': [('CETI', 1)],
-    'Centro Historico': [('CETI', 8)],
-    'Plaza Galerias': [],
-    'Real Center': [],
-    'Casa de Marifer <3': [],
-    'Andares': [],
-    'CETI': []
+    'Casa': [('Cafetería', 7), ('Parque', 5), ('Tienda', 8)],
+    'Cafetería': [('Centro Comercial', 4), ('Supermercado', 6), ('Oficina', 3)],
+    'Parque': [('Oficina', 3)],
+    'Tienda': [('Restaurante', 2), ('Cine', 5)],
+    'Centro Comercial': [('Casa de un Amigo', 9)],
+    'Supermercado': [('Banco', 3), ('Librería', 4)],
+    'Oficina': [('Museo', 7)],
+    'Restaurante': [('Biblioteca', 1)],
+    'Cine': [('Biblioteca', 8)],
+    'Casa de un Amigo': []  # Nodo objetivo
 }
 
-# Llamada a la función de búsqueda con 'Casa' como inicio y 'CETI' como objetivo
-ao_estrella(grafo, 'Casa', 'CETI')
+# Llamamos a la función de búsqueda con el nodo de inicio 'Casa' y el nodo objetivo 'Casa de un Amigo'
+ao_estrella(grafo, 'Casa', 'Casa de un Amigo')
