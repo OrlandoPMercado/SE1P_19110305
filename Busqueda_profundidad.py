@@ -15,16 +15,16 @@ def Busq_Prof(graph, start, goal):
 
 # Ejemplo de uso
 grafo = {
-    'Escuela': ['Edificio_B', 'Cafeteria_B'],
-    'Edificio_B': ['Escuela', 'Edificio_G', 'Edificio_L'],
-    'Cafeteria_B': ['Escuela', 'Edificio_L'],
-    'Edificio_G': ['Edificio_B'],
-    'Edificio_L': ['Edificio_B', 'Cafeteria_B']
+    'Colomos': ['Estanque_P', 'Jardin_M'],
+    'Estanque_P': ['Colomos', 'Jardin_J', 'Caballeriza'],
+    'Jardin_M': ['Colomos', 'Caballeriza'],
+    'Jardin_J': ['Estanque_P'],
+    'Caballeriza': ['Estanque_P', 'Jardin_M']
 }
 
-start = 'Escuela'
-goal = 'Edificio_L'
+start = 'Colomos'
+goal = 'Caballeriza'
 
-camino = Busq_Prof(grafo, start, goal)
+caballos = Busq_Prof(grafo, start, goal)
 
-print("Rutina a la llegada a la escuela ", camino)
+print("Recorrido por colomos", caballos)
